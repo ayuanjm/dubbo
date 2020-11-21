@@ -12,6 +12,6 @@ public class ProviderServiceImpl implements ProviderService {
     @Override
     public String sayHello(String word) {
         System.out.println("hello dubbo");
-        return word;
+        return "20201224:" + word;
     }
 }

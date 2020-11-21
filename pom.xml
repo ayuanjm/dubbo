@@ -27,17 +27,36 @@
     </modules>
 
     <dependencies>
+        <!--不要把springCloud的依赖放进来，不然在服务暴露时看不到dubbo暴露日志-->
+
         <dependency>
             <groupId>com.yuan.dubbo</groupId>
             <artifactId>dubbo-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.alibaba/dubbo -->
+        <!-- dubbo依赖 -->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo</artifactId>
             <version>2.7.2</version>
+        </dependency>
+
+        <!-- zookeeper依赖
+        mac 安装zookeeper时不要使用brew install zookeeper自动安装最新版本，
+        不然会和jdk不匹配zkServer start 失败 -->
+        <!--Curator 存在版本兼容问题。
+            zookeeper版本3.5.5
+            curator版本4.0.1-->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>4.0.1</version>
         </dependency>
     </dependencies>
 

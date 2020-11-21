@@ -1,17 +1,14 @@
-package com.yuan.dubbo.demo;
+package com.yuan.dubbo.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-/**
- * @author yuan
- */
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-public class DubboDemoApplication {
+public class DubboConsumerApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(DubboDemoApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(DubboConsumerApplication.class, args);
+	}
 
 }

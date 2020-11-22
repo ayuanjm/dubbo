@@ -15,6 +15,7 @@ public class ProviderApp {
 //        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/spring/provider.xml");
 //        context.start();
 //        System.in.read(); // 按任意键退出
+        //dubbo提供的启动类方法，会启动dubbo中配置的多个container。META-INF/spring/*.xml
         //等同上面3行代码作用
         Main.main(args);
     }
